@@ -58,6 +58,10 @@ struct TaskFile {
 }
 
 impl Task {
+    pub fn new(config: TaskConfig) -> Self {
+        Self { config }
+    }
+
     pub fn create_source(&self) -> Result<Source<TaskItem>, TaskError> {
         let tasks = self
             .config
