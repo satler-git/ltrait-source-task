@@ -3,6 +3,11 @@ name = "ltrait-source-task"
 version = "0.1.0"
 edition = "2024"
 
+authors = ["satler <satler@satler.dev>"]
+license = "MIT"
+repository = "https://github.com/satler-git/ltrait-source-task"
+description = "A LTrait source for user defined command"
+
 [dependencies]
 async-stream = "0.3.6"
 dirs = "6.0.0"
