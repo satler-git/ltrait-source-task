@@ -21,6 +21,7 @@ pub enum TaskError {
     Toml(#[source] toml::de::Error),
 }
 
+#[derive(Debug, Clone)]
 pub struct TaskConfig {
     /// The list of paths to load tasks
     pub path: Vec<PathBuf>,
@@ -34,11 +35,12 @@ pub fn default_path() -> Result<PathBuf, TaskError> {
         .join("task.toml"))
 }
 
+#[derive(Debug, Clone)]
 pub struct Task {
     config: TaskConfig,
 }
 
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Debug, Clone)]
 pub struct TaskItem {
     pub name: String,
     /// show only if this command returns 0(exit code).
