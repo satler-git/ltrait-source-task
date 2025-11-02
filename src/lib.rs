@@ -58,7 +58,7 @@ struct TaskFile {
 }
 
 impl Task {
-    pub fn into_source(&self) -> Result<Source<TaskItem>, TaskError> {
+    pub fn create_source(&self) -> Result<Source<TaskItem>, TaskError> {
         let tasks = self
             .config
             .path
